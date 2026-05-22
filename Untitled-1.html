@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Cumpleaños Amor</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(135deg,#ff9ecf,#ffc7de,#ffddee);
+    font-family:'Poppins',sans-serif;
+    position:relative;
+}
+
+/* Fondo brillante */
+body::before,
+body::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:rgba(255,255,255,0.15);
+    border-radius:50%;
+    filter:blur(90px);
+}
+
+body::before{
+    top:-100px;
+    left:-100px;
+}
+
+body::after{
+    bottom:-100px;
+    right:-100px;
+}
+
+/* Caja principal */
+.contenedor{
+    position:relative;
+    width:700px;
+    padding:60px;
+    border-radius:35px;
+    text-align:center;
+    background:rgba(255,255,255,0.18);
+    backdrop-filter:blur(14px);
+    box-shadow:
+        0 0 25px rgba(255,255,255,0.4),
+        0 0 60px rgba(255,105,180,0.3);
+    border:1px solid rgba(255,255,255,0.3);
+}
+
+/* Título */
+h1{
+    font-family:'Great Vibes',cursive;
+    font-size:95px;
+    color:#ff1493;
+    text-shadow:
+        0 0 10px white,
+        0 0 25px #ff69b4,
+        0 0 40px #ff1493;
+    margin-bottom:20px;
+    animation:flotar 3s ease-in-out infinite;
+}
+
+/* Mensaje */
+p{
+    color:white;
+    font-size:22px;
+    line-height:1.7;
+    margin-bottom:60px;
+    text-shadow:0 0 10px rgba(255,255,255,0.5);
+}
+
+/* Corazón */
+.corazon{
+    position:relative;
+    width:140px;
+    height:140px;
+    background:linear-gradient(145deg,#ff4f81,#ff1493);
+    transform:rotate(-45deg);
+    margin:0 auto 80px;
+    animation:latido 1.3s infinite;
+    box-shadow:
+        0 0 25px #ff69b4,
+        0 0 60px #ff1493;
+}
+
+.corazon::before,
+.corazon::after{
+    content:"";
+    position:absolute;
+    width:140px;
+    height:140px;
+    background:linear-gradient(145deg,#ff4f81,#ff1493);
+    border-radius:50%;
+}
+
+.corazon::before{
+    top:-70px;
+    left:0;
+}
+
+.corazon::after{
+    left:70px;
+    top:0;
+}
+
+/* Tulipán rosado */
+.tulipan{
+    position:relative;
+    width:80px;
+    height:150px;
+    margin:0 auto;
+}
+
+/* Tallo */
+.tallo{
+    position:absolute;
+    width:8px;
+    height:90px;
+    background:#3cb371;
+    left:36px;
+    top:60px;
+    border-radius:10px;
+}
+
+/* Hoja */
+.hoja{
+    position:absolute;
+    width:40px;
+    height:20px;
+    background:#48c774;
+    border-radius:50px 0;
+    top:95px;
+}
+
+.hoja.izq{
+    left:0;
+    transform:rotate(-30deg);
+}
+
+.hoja.der{
+    right:0;
+    transform:rotate(30deg);
+}
+
+/* Pétalos */
+.petalo{
+    position:absolute;
+    width:45px;
+    height:60px;
+    background:#ff69b4;
+    border-radius:50% 50% 10% 10%;
+    top:0;
+    box-shadow:0 0 15px #ff69b4;
+}
+
+.petalo.centro{
+    left:18px;
+    z-index:2;
+}
+
+.petalo.izq{
+    left:0;
+    transform:rotate(-20deg);
+}
+
+.petalo.der{
+    right:0;
+    transform:rotate(20deg);
+}
+
+/* Flores decorativas */
+.flor{
+    position:absolute;
+    font-size:40px;
+    animation:girar 10s linear infinite;
+}
+
+.f1{
+    top:20px;
+    left:30px;
+}
+
+.f2{
+    bottom:20px;
+    right:30px;
+}
+
+/* Animaciones */
+@keyframes latido{
+    0%{
+        transform:rotate(-45deg) scale(1);
+    }
+    50%{
+        transform:rotate(-45deg) scale(1.12);
+    }
+    100%{
+        transform:rotate(-45deg) scale(1);
+    }
+}
+
+@keyframes flotar{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+@keyframes girar{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <div class="flor f1">🌸</div>
+    <div class="flor f2">🌸</div>
+
+    <h1>Feliz Cumpleaños Amor</h1>
+
+    <p>
+        Hoy es un día especial porque celebra la existencia
+        de la persona más hermosa de mi vida. 💖<br>
+        Que cada momento esté lleno de felicidad,
+        amor y sueños cumplidos. ✨
+    </p>
+
+    <div class="corazon"></div>
+
+    <!-- Tulipán -->
+    <div class="tulipan">
+        <div class="petalo izq"></div>
+        <div class="petalo centro"></div>
+        <div class="petalo der"></div>
+
+        <div class="tallo"></div>
+
+        <div class="hoja izq"></div>
+        <div class="hoja der"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
